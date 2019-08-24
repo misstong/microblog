@@ -1,0 +1,53 @@
+2019-08-24 15:11:26,372 ERROR : Exception on /login [GET] [in d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\ThunderDownload\Python_code\venv_test\app\routes.py", line 67, in login
+    return render_template("login.html", title='Sign In', form=form)
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\ThunderDownload\Python_code\venv_test\app\templates\base.html", line 92, in template
+    {% block content %}{% endblock %}
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "D:\ThunderDownload\Python_code\venv_test\app\templates\login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\ThunderDownload\Python_code\venv_test\app\templates\base.html", line 92, in template
+    {% block content %}{% endblock %}
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\jinja2\environment.py", line 543, in _generate
+    optimized=self.optimized)
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\jinja2\compiler.py", line 82, in generate
+    generator.visit(node)
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\jinja2\compiler.py", line 718, in visit_Template
+    self.fail('block %r defined twice' % block.name, block.lineno)
+  File "d:\thunderdownload\python_code\venv_test\ve1\lib\site-packages\jinja2\compiler.py", line 315, in fail
+    raise TemplateAssertionError(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateAssertionError: block 'content' defined twice
+2019-08-24 15:15:08,813 INFO : Microblog startup [in D:\ThunderDownload\Python_code\venv_test\app\__init__.py:46]
+2019-08-24 15:18:17,076 INFO : Microblog startup [in D:\ThunderDownload\Python_code\venv_test\app\__init__.py:46]

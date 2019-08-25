@@ -1,4 +1,4 @@
 logs/*
 /ve1/
-/_pycache_/
+/__pycache__/
 *.db

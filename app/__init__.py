@@ -11,6 +11,8 @@ from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask import request
 from flask_babel import Babel
+from elasticsearch import Elasticsearch
+
 
 
 app = Flask(__name__)
@@ -27,6 +29,9 @@ from app.errors import bp as errors_bp
 app.register_blueprint(errors_bp)
 from app.auth import bp as auth_bp
 app.register_blueprint(auth_bp, url_prefix='/auth')
+
+app.elasticsearch = Elasticsearch(app.config['ELASTICSEARCH_URL']) \
+        if app.config['ELASTICSEARCH_URL'] else None
 
 @babel.localeselector
 def get_locale():

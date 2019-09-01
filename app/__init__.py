@@ -33,6 +33,10 @@ app.register_blueprint(auth_bp, url_prefix='/auth')
 app.elasticsearch = Elasticsearch(app.config['ELASTICSEARCH_URL']) \
         if app.config['ELASTICSEARCH_URL'] else None
 
+
+from app.api import bp as api_bp
+app.register_blueprint(api_bp,url_prefix='/api')
+
 @babel.localeselector
 def get_locale():
     return request.accept_languages.best_match(app.config['LANGUAGES'])
